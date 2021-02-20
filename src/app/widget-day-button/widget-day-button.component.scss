@@ -1,0 +1,40 @@
+@import "../../variables";
+
+.widget-day-button {
+  font-size: $app-font-size-sm;
+  text-align: center;
+
+  &.weekend {
+    color: $app-color-gray;
+  }
+
+  .day-no {
+    font-size: $app-font-size-md;
+    line-height: $app-font-size-md;
+    font-weight: bold;
+    padding: 5px;
+    border: solid 1px #fff;
+
+    &.current {
+      border-radius: $app-border-radius;
+      border-color: $app-color-orange;
+    }
+
+    &.active {
+      border-radius: $app-border-radius;
+      background: $app-color-orange;
+      border-color: $app-color-orange;
+    }
+  }
+
+  .indicator {
+    &:before {
+      content: '';
+      background: $app-color-green;
+      width: 5px;
+      height: 5px;
+      display: inline-block;
+      border-radius: $app-border-radius;
+    }
+  }
+}

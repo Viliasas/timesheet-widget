@@ -1,10 +1,12 @@
+@import "../../variables";
+
 .widget-header {
   display: flex;
-  padding: 16px;
+  padding: $app-padding;
 
   .date {
     flex-grow: 1;
-    font-size: 16px;
+    font-size: $app-font-size-lg;
     font-weight: bold;
     display: flex;
     flex-direction: column;

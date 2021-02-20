@@ -8,13 +8,20 @@ import { WidgetComponent } from './widget/widget.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 import { WidgetHeaderComponent } from './widget-header/widget-header.component';
+import { WidgetDayBarComponent } from './widget-day-bar/widget-day-bar.component';
+import { WidgetDayButtonComponent } from './widget-day-button/widget-day-button.component';
+import { BackendService } from './backend.service';
+import { DayService } from './day.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     WidgetComponent,
-    WidgetHeaderComponent
+    WidgetHeaderComponent,
+    WidgetDayBarComponent,
+    WidgetDayButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +29,13 @@ import { WidgetHeaderComponent } from './widget-header/widget-header.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatDividerModule
   ],
-  providers: [],
+  providers: [
+    BackendService,
+    DayService
+  ],
   bootstrap: [AppComponent]
 })
 

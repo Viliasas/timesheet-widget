@@ -1,5 +1,7 @@
+@import "../../variables";
+
 .widget {
-  width: 550px;
-  height: 870px;
+  width: $app-width;
+  height: $app-height;
   padding: 0;
 }

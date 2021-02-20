@@ -1,0 +1,7 @@
+@import "../../variables";
+
+.widget-day-bar {
+  display: flex;
+  padding: 0 $app-padding $app-padding-sm;
+  justify-content: space-between;
+}
