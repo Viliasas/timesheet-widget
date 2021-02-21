@@ -1,3 +1,36 @@
+$md-orange: (
+  50 : #fdf1e0,
+  100 : #fbdcb3,
+  200 : #f8c480,
+  300 : #f5ac4d,
+  400 : #f29b26,
+  500 : #f08900,
+  600 : #ee8100,
+  700 : #ec7600,
+  800 : #e96c00,
+  900 : #e55900,
+  A100 : #ffffff,
+  A200 : #ffe5d9,
+  A400 : #ffc3a6,
+  A700 : #ffb18c,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
 $app-font-size-sm: 12px;
 $app-font-size-md: 14px;
 $app-font-size-lg: 16px;
@@ -10,7 +43,8 @@ $app-color-green: #5ecf79;
 $app-border-radius: 4px;
 
 $app-padding-sm: 8px;
-$app-padding: 16px;
+$app-padding-md: 20px;
+$app-padding-lg: 32px;
 
 $app-width: 550px;
 $app-height: 870px;

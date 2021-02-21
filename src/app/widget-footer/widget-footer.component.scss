@@ -1,0 +1,12 @@
+@import "../../variables";
+
+.widget-footer {
+  background: $app-color-light-gray;
+  padding: 26px $app-padding-md;
+
+  .mat-button-base {
+    width: 100%;
+    line-height: 48px;
+    color: #fff;
+  }
+}

@@ -1,21 +1,32 @@
 @import "../../variables";
 
 .widget-header {
-  display: flex;
-  padding: $app-padding;
+  padding: $app-padding-md;
 
   .date {
     flex-grow: 1;
-    font-size: $app-font-size-lg;
-    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .info {
+    display: flex;
+
+    .date {
+      font-size: $app-font-size-lg;
+      font-weight: bold;
+    }
   }
 
   .mat-icon-button {
     width: 24px;
     height: 24px;
     line-height: 24px;
+  }
+
+  .bottom {
+    display: flex;
+    padding: $app-padding-md 0 0;
   }
 }

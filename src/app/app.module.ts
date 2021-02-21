@@ -14,6 +14,8 @@ import { WidgetDayBarComponent } from './widget-day-bar/widget-day-bar.component
 import { WidgetDayButtonComponent } from './widget-day-button/widget-day-button.component';
 import { BackendService } from './backend.service';
 import { DayService } from './day.service';
+import { WidgetFooterComponent } from './widget-footer/widget-footer.component';
+import { WidgetSummaryComponent } from './widget-summary/widget-summary.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DayService } from './day.service';
     WidgetComponent,
     WidgetHeaderComponent,
     WidgetDayBarComponent,
-    WidgetDayButtonComponent
+    WidgetDayButtonComponent,
+    WidgetFooterComponent,
+    WidgetSummaryComponent
   ],
   imports: [
     BrowserModule,
