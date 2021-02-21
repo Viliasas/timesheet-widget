@@ -16,6 +16,7 @@ import { BackendService } from './backend.service';
 import { DayService } from './day.service';
 import { WidgetFooterComponent } from './widget-footer/widget-footer.component';
 import { WidgetSummaryComponent } from './widget-summary/widget-summary.component';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { WidgetSummaryComponent } from './widget-summary/widget-summary.componen
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    PerfectScrollbarModule
   ],
   providers: [
     BackendService,

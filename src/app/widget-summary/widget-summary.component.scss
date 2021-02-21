@@ -1,7 +1,21 @@
+@import "../../variables";
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
 :host {
   flex-grow: 1;
 }
 
 .widget-summary {
-  
+  padding: 0 $app-padding-md;
+
+  .content-container {
+    position: relative;
+    overflow: auto;
+    height: 500px;
+    min-height: 0;
+  }
+
+  .scroll-container {
+    position: relative;
+  }
 }

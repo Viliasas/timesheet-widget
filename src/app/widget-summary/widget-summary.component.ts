@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 @Component({
   selector: 'app-widget-summary',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./widget-summary.component.scss']
 })
 export class WidgetSummaryComponent implements OnInit {
+
+  scrollConfig: PerfectScrollbarConfigInterface = {
+    suppressScrollX: true,
+    suppressScrollY: false,
+    wheelPropagation: true,
+  };
 
   constructor() {
   }
