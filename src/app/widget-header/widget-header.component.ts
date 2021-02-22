@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DayService } from '../day.service';
+import { Day } from '../day';
 
 @Component({
   selector: 'app-widget-header',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WidgetHeaderComponent implements OnInit {
 
-  constructor() { }
+  days: Day[] = [];
+  selectedDayIndex = 6;
+
+  constructor(private service: DayService) {
+  }
 
   ngOnInit(): void {
+    this.days = this.service.getDays();
+  }
+
+  getSelectedDay(): Day {
+    return this.days[this.selectedDayIndex];
   }
 
 }

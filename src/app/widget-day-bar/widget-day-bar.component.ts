@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Day } from '../day';
-import { DayService } from '../day.service';
 
 @Component({
   selector: 'app-widget-day-bar',
@@ -10,13 +9,18 @@ import { DayService } from '../day.service';
 
 export class WidgetDayBarComponent implements OnInit {
 
-  days: Day[] = [];
+  @Input() days: Day[] = [];
+  @Input() selectedIndex!: number;
+  @Output() selectedIndexChanged = new EventEmitter();
 
-  constructor(private service: DayService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.days = this.service.getDays();
+  }
+
+  clickedOnDay(index: number): void {
+    this.selectedIndexChanged.emit(index);
   }
 
 }

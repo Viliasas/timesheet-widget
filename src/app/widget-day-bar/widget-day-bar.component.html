@@ -1,3 +1,4 @@
 <div class="widget-day-bar">
-  <app-widget-day-button *ngFor="let day of days" [day]="day"></app-widget-day-button>
+  <app-widget-day-button *ngFor="let day of days; index as i" [day]="day" [isActive]="i === selectedIndex"
+                         (click)="clickedOnDay(i)"></app-widget-day-button>
 </div>

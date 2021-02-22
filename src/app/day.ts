@@ -14,6 +14,14 @@ export class Day {
     return this.day.format('D');
   }
 
+  getMonthYear(): string {
+    return this.day.format('MMMM YYYY');
+  }
+
+  getDayDate(): string {
+    return this.day.format('dddd DD.MM.YYYY');
+  }
+
   isWeekend(): boolean {
     const weekDay = this.day.day();
 

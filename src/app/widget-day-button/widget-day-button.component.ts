@@ -9,17 +9,12 @@ import { Day } from '../day';
 export class WidgetDayButtonComponent implements OnInit {
 
   @Input() day!: Day;
+  @Input() isActive = false;
 
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  clickedOnDay(event: any): void {
-    alert('Clicked!');
-
-    event.preventDefault();
   }
 
 }

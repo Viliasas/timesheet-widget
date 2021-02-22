@@ -1,7 +1,7 @@
-<div class="widget-day-button" [class.weekend]="day.isWeekend()" [class.current]="day.isCurrentDay()">
+<div class="widget-day-button" [class.weekend]="day.isWeekend()" [class.current]="day.isCurrentDay()"
+     [class.active]="isActive">
   <div>{{ day.getDayName() }}</div>
   <div class="day-no">{{ day.getDayNumber() }}</div>
   <div>8:00</div>
   <div class="indicator"></div>
-  <a href="#" class="overlay" (click)="clickedOnDay($event)"></a>
 </div>
