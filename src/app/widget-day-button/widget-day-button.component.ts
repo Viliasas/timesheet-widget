@@ -16,4 +16,10 @@ export class WidgetDayButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickedOnDay(event: any): void {
+    alert('Clicked!');
+
+    event.preventDefault();
+  }
+
 }

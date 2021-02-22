@@ -3,6 +3,13 @@
 .widget-day-button {
   font-size: $app-font-size-sm;
   text-align: center;
+  position: relative;
+  padding: 5px 10px;
+  border-radius: $app-border-radius;
+
+  &:hover, &:active {
+    background: $app-color-light-gray;
+  }
 
   &.weekend {
     color: $app-color-gray;
@@ -13,7 +20,7 @@
     line-height: $app-font-size-md;
     font-weight: bold;
     padding: 5px;
-    border: solid 1px #fff;
+    border: solid 1px transparent;
   }
 
   &.current .day-no {
@@ -36,5 +43,14 @@
       display: inline-block;
       border-radius: $app-border-radius;
     }
+  }
+
+  .overlay {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 }
