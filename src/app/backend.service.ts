@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Day } from './day';
-
-const DAYS = [
-  new Day('1'),
-  new Day('2'),
-  new Day('3'),
-  new Day('4'),
-  new Day('5'),
-  new Day('6'),
-  new Day('7'),
-];
+import * as moment from 'moment';
 
 @Injectable()
 export class BackendService {
 
+  days: Day[] = [];
+
   constructor() {
+    this.prepareDays();
   }
 
   getDays(): PromiseLike<Day[]> {
-    return Promise.resolve<Day[]>(DAYS);
+    return Promise.resolve<Day[]>(this.days);
+  }
+
+  prepareDays(): void {
+    for (let i = 6; i >= 0; i--) {
+      this.days.push(new Day(moment().subtract(i, 'days')));
+    }
   }
 }

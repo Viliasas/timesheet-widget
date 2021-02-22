@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Day } from '../day';
 
 @Component({
   selector: 'app-widget-day-button',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WidgetDayButtonComponent implements OnInit {
 
-  constructor() { }
+  @Input() day!: Day;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

@@ -1,6 +1,6 @@
-<div class="widget-day-button">
-  <div>Mon</div>
-  <div class="day-no">26</div>
+<div class="widget-day-button" [class.weekend]="day.isWeekend()" [class.current]="day.isCurrentDay()">
+  <div>{{ day.getDayName() }}</div>
+  <div class="day-no">{{ day.getDayNumber() }}</div>
   <div>8:00</div>
   <div class="indicator"></div>
 </div>
