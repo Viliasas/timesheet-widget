@@ -17,6 +17,7 @@ import { DayService } from './day.service';
 import { WidgetFooterComponent } from './widget-footer/widget-footer.component';
 import { WidgetSummaryComponent } from './widget-summary/widget-summary.component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { WidgetSummaryGroupComponent } from './widget-summary-group/widget-summary-group.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
     WidgetDayBarComponent,
     WidgetDayButtonComponent,
     WidgetFooterComponent,
-    WidgetSummaryComponent
+    WidgetSummaryComponent,
+    WidgetSummaryGroupComponent
   ],
   imports: [
     BrowserModule,

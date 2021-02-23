@@ -6,16 +6,20 @@
 }
 
 .widget-summary {
-  padding: 0 $app-padding-md;
+  padding: 0 5px 0 $app-padding-md;
 
   .content-container {
     position: relative;
     overflow: auto;
-    height: 500px;
+    height: 455px;
     min-height: 0;
   }
 
   .scroll-container {
     position: relative;
+  }
+
+  .scrollable-content {
+    padding-right: 15px;
   }
 }

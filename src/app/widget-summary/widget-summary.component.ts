@@ -11,7 +11,6 @@ export class WidgetSummaryComponent implements OnInit {
   scrollConfig: PerfectScrollbarConfigInterface = {
     suppressScrollX: true,
     suppressScrollY: false,
-    wheelPropagation: true,
   };
 
   constructor() {

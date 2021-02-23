@@ -1,0 +1,49 @@
+@import "../../variables";
+
+.widget-summary-group {
+  .header {
+    background: $app-color-light-gray;
+    border-radius: $app-border-radius;
+    padding: 13px;
+    display: flex;
+    line-height: 24px;
+
+    .title {
+      flex-grow: 1;
+      padding: 0 $app-padding-sm;
+      font-weight: bold;
+    }
+
+    .hours {
+      color: $app-color-gray;
+    }
+  }
+
+  .mat-icon {
+    display: block;
+  }
+
+  .items {
+    padding: $app-font-size-md 13px;
+  }
+
+  .items {
+    table {
+      width: 100%;
+      font-size: $app-font-size-sm;
+    }
+
+    th {
+      color: $app-color-gray;
+      font-weight: normal;
+    }
+
+    th, td {
+      text-align: right;
+    }
+
+    th:first-of-type, td:first-of-type {
+      text-align: left;
+    }
+  }
+}
