@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Event } from '../event';
 
 @Component({
   selector: 'app-widget-summary-group',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WidgetSummaryGroupComponent implements OnInit {
 
-  constructor() { }
+  @Input() events?: Event[];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

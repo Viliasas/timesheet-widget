@@ -2,12 +2,7 @@
   <div class="content-container">
     <perfect-scrollbar class="scroll-container" [config]="scrollConfig" [scrollIndicators]="true">
       <div class="scrollable-content" *ngIf="selectedDay">
-        <app-widget-summary-group></app-widget-summary-group>
-        <app-widget-summary-group></app-widget-summary-group>
-        <app-widget-summary-group></app-widget-summary-group>
-        <app-widget-summary-group></app-widget-summary-group>
-        <app-widget-summary-group></app-widget-summary-group>
-        <app-widget-summary-group></app-widget-summary-group>
+        <app-widget-summary-group *ngFor="let events of sortedEvents" [events]="events"></app-widget-summary-group>
       </div>
     </perfect-scrollbar>
   </div>
