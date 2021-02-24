@@ -1,5 +1,6 @@
 <mat-card class="widget">
-  <app-widget-header></app-widget-header>
-  <app-widget-summary></app-widget-summary>
+  <app-widget-header [days]="days" [selectedDay]="selectedDay"
+                     (selectedDayChanged)="selectedDay = $event"></app-widget-header>
+  <app-widget-summary [selectedDay]="selectedDay" [events]="events"></app-widget-summary>
   <app-widget-footer></app-widget-footer>
 </mat-card>

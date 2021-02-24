@@ -3,7 +3,10 @@ import { Moment } from 'moment/moment';
 
 export class Day {
 
+  date: string;
+
   constructor(private day: Moment) {
+    this.date = day.format('YYYY-MM-DD');
   }
 
   getDayName(): string {
@@ -30,6 +33,18 @@ export class Day {
 
   isCurrentDay(): boolean {
     return this.day.isSame(moment(), 'day');
+  }
+
+  getMoment(): Moment {
+    return this.day.clone();
+  }
+
+  isEqual(day?: Day): boolean {
+    if ((day === undefined) || (day === null)) {
+      return false;
+    }
+
+    return this.date === day.date;
   }
 
 }

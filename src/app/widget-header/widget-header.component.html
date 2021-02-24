@@ -1,20 +1,20 @@
 <div class="widget-header">
   <div class="info">
     <div class="date">
-      <div *ngIf="getSelectedDay()">{{ getSelectedDay().getMonthYear() }}</div>
+      <div *ngIf="selectedDay">{{ selectedDay.getMonthYear() }}</div>
     </div>
     <div>
-      <button mat-icon-button (click)="selectedDayIndex = days.length - 1">
+      <button mat-icon-button (click)="selectedDay = days[days.length - 1]">
         <mat-icon>calendar_today</mat-icon>
       </button>
     </div>
   </div>
-  <app-widget-day-bar [days]="days" [selectedIndex]="selectedDayIndex"
-                      (selectedIndexChanged)="selectedDayIndex = $event"></app-widget-day-bar>
+  <app-widget-day-bar [days]="days" [selectedDay]="selectedDay"
+                      (selectedDayChanged)="selectedDayChanged.emit($event)"></app-widget-day-bar>
   <mat-divider></mat-divider>
   <div class="bottom">
     <div class="date">
-      <div *ngIf="getSelectedDay()">{{ getSelectedDay().getDayDate() }}</div>
+      <div *ngIf="selectedDay">{{ selectedDay.getDayDate() }}</div>
     </div>
     <div>
       <button mat-button color="primary">GO TO TIMESHEET</button>

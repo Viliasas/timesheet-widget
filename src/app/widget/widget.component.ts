@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Day } from '../day';
+import { Event } from '../event';
+import { BackendService } from '../backend.service';
 
 @Component({
   selector: 'app-widget',
@@ -8,10 +11,25 @@ import { Component, OnInit } from '@angular/core';
 
 export class WidgetComponent implements OnInit {
 
-  constructor() {
+  days: Day[] = [];
+  events: Event[] = [];
+  selectedDay?: Day;
+
+  constructor(private backendService: BackendService) {
   }
 
   ngOnInit(): void {
+    this.backendService.getDays().then((days: Day[]) => {
+      this.days.push(...days);
+
+      this.selectedDay = this.days[this.days.length - 1];
+    });
+
+    this.backendService.getEvents().then((events: Event[]) => {
+      this.events.push(...events);
+    });
+
+    console.log(this.events);
   }
 
 }

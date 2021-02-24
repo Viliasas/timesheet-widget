@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DayService } from '../day.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Day } from '../day';
 
 @Component({
@@ -9,18 +8,14 @@ import { Day } from '../day';
 })
 export class WidgetHeaderComponent implements OnInit {
 
-  days: Day[] = [];
-  selectedDayIndex = 6;
+  @Input() days: Day[] = [];
+  @Input() selectedDay?: Day;
+  @Output() selectedDayChanged = new EventEmitter();
 
-  constructor(private service: DayService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.days = this.service.getDays();
-  }
-
-  getSelectedDay(): Day {
-    return this.days[this.selectedDayIndex];
   }
 
 }
