@@ -17,6 +17,7 @@ import { WidgetFooterComponent } from './widget-footer/widget-footer.component';
 import { WidgetSummaryComponent } from './widget-summary/widget-summary.component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { WidgetSummaryGroupComponent } from './widget-summary-group/widget-summary-group.component';
+import { WidgetDummyPageComponent } from './widget-dummy-page/widget-dummy-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { WidgetSummaryGroupComponent } from './widget-summary-group/widget-summa
     WidgetDayButtonComponent,
     WidgetFooterComponent,
     WidgetSummaryComponent,
-    WidgetSummaryGroupComponent
+    WidgetSummaryGroupComponent,
+    WidgetDummyPageComponent
   ],
   imports: [
     BrowserModule,
