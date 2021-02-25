@@ -38,11 +38,35 @@
   .indicator {
     &:before {
       content: '';
-      background: $app-color-green;
+      background: transparent;
       width: 5px;
       height: 5px;
       display: inline-block;
       border-radius: $app-border-radius;
+    }
+  }
+
+  &.has-other-tasks {
+    .indicator {
+      &:before {
+        background-color: $app-color-gray;
+      }
+    }
+  }
+
+  &.all-approved {
+    .indicator {
+      &:before {
+        background-color: $app-color-green;
+      }
+    }
+  }
+
+  &.has-rejected {
+    .indicator {
+      &:before {
+        background-color: $app-color-red;
+      }
     }
   }
 }

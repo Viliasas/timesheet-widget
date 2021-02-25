@@ -1,7 +1,8 @@
 <div class="widget-day-button" [class.weekend]="day.isWeekend()" [class.current]="day.isCurrentDay()"
-     [class.active]="isActive">
+     [class.active]="isActive" [class.has-rejected]="hasRejectedTasks" [class.all-approved]="allTasksApproved"
+     [class.has-other-tasks]="hasTasks">
   <div>{{ day.getDayName() }}</div>
   <div class="day-no">{{ day.getDayNumber() }}</div>
-  <div>8:00</div>
+  <div>{{ hours }}</div>
   <div class="indicator"></div>
 </div>

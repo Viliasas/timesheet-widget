@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Day } from '../day';
+import { Event } from '../event';
 
 @Component({
   selector: 'app-widget-day-bar',
@@ -11,6 +12,7 @@ export class WidgetDayBarComponent implements OnInit {
 
   @Input() days: Day[] = [];
   @Input() selectedDay?: Day;
+  @Input() events: Event[] = [];
   @Output() selectedDayChanged = new EventEmitter();
 
   constructor() {

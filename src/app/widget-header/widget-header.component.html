@@ -9,7 +9,7 @@
       </button>
     </div>
   </div>
-  <app-widget-day-bar [days]="days" [selectedDay]="selectedDay"
+  <app-widget-day-bar [days]="days" [selectedDay]="selectedDay" [events]="events"
                       (selectedDayChanged)="selectedDayChanged.emit($event)"></app-widget-day-bar>
   <mat-divider></mat-divider>
   <div class="bottom">

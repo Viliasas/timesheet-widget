@@ -1,4 +1,4 @@
 <div class="widget-day-bar">
-  <app-widget-day-button *ngFor="let day of days" [day]="day" [isActive]="day.isEqual(selectedDay)"
+  <app-widget-day-button *ngFor="let day of days" [day]="day" [isActive]="day.isEqual(selectedDay)" [events]="events"
                          (click)="selectedDayChanged.emit(day)"></app-widget-day-button>
 </div>
