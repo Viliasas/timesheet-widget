@@ -28,7 +28,6 @@ export class WidgetSummaryComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
     if (Object.keys(changes).indexOf('selectedDay') !== -1) {
       this.sortEventsForSelectedDay();
     }
@@ -42,14 +41,24 @@ export class WidgetSummaryComponent implements OnInit, OnChanges {
         return;
       }
 
-      // @ts-ignore
-      if (typeof temp[event.eventTypeName] === 'undefined') {
-        // @ts-ignore
-        temp[event.eventTypeName] = [];
+      let eventType = '-';
+
+      if (event.isHoursEventType) {
+        eventType = 'Hours';
+      } else if (event.isExpenseType) {
+        eventType = 'Expenses';
+      } else if (event.isAdditionalHoursEventType) {
+        eventType = 'Additional hours';
       }
 
       // @ts-ignore
-      temp[event.eventTypeName].push(event);
+      if (typeof temp[eventType] === 'undefined') {
+        // @ts-ignore
+        temp[eventType] = [];
+      }
+
+      // @ts-ignore
+      temp[eventType].push(event);
     });
 
     this.sortedEvents.splice(0, this.sortedEvents.length);

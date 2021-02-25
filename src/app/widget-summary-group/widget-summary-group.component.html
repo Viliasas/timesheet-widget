@@ -1,13 +1,13 @@
 <div class="widget-summary-group">
   <div class="header">
     <div class="icon">
-      <mat-icon>access_time</mat-icon>
+      <mat-icon>{{ icon }}</mat-icon>
     </div>
     <div class="title">
-      Hours
+      {{ title }}
     </div>
-    <div class="hours">
-      (08:00 - 16:30)
+    <div class="hours" *ngIf="hours">
+      ({{ hours}})
     </div>
   </div>
   <div class="items">
@@ -15,20 +15,18 @@
       <thead>
       <tr>
         <th>Type</th>
-        <th>Quantity</th>
-        <th>Duration</th>
+        <th *ngIf="hasQuantity">Quantity</th>
+        <th>{{ units }}</th>
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Something</td>
-        <td>2</td>
-        <td>7:30</td>
-      </tr>
-      <tr>
-        <td>Things</td>
-        <td>5</td>
-        <td>567</td>
+      <tr *ngFor="let event of events">
+        <td>{{ event.eventTypeName }}</td>
+        <td *ngIf="hasQuantity">{{ event.quantity }}</td>
+        <td>
+          <span *ngIf="event.isExpenseType">{{ getExpenseTotal(event) }}</span>
+          <span *ngIf="event.isHoursEventType || event.isAdditionalHoursEventType">{{ getEventTimeSpent(event) }}</span>
+        </td>
       </tr>
       </tbody>
     </table>
