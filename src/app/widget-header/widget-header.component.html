@@ -4,7 +4,7 @@
       <div *ngIf="selectedDay">{{ selectedDay.getMonthYear() }}</div>
     </div>
     <div>
-      <button mat-icon-button (click)="selectedDay = days[days.length - 1]">
+      <button mat-icon-button (click)="selectedDayChanged.emit(days[days.length - 1])">
         <mat-icon>calendar_today</mat-icon>
       </button>
     </div>

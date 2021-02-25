@@ -30,7 +30,7 @@ export class BackendService {
       const eventCount = this.generateRandomInteger(0, 10);
 
       for (let i = 0; i < eventCount; i++) {
-        const type = eventTypes[this.generateRandomInteger(0, 1)];
+        const type = eventTypes[this.generateRandomInteger(0, 2)];
         const words = randomWords({exactly: 2, join: ' '});
 
         const event = new Event();
